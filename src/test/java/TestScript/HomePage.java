@@ -33,14 +33,14 @@ public class HomePage {
 	public void cookies() throws IOException
 	{
 		driver = new ChromeDriver();
-		
 		CommonMethods cm = new CommonMethods();
 		driver.get(cm.getProperty("Homeurl"));
 		driver.manage().window().maximize();
 		HomeObject ho = new HomeObject(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
 		ho.cookie().click();
-		log.info(driver.getTitle());
+		String title = driver.getTitle();
+		Assert.assertEquals(title,"SPARTOO| Shoes, bags and clothes | Free Delivery");
 	}
 	@Test(priority=1)
 	public void Header() throws IOException, InterruptedException
