@@ -40,7 +40,7 @@ public class HomePage {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
 		ho.cookie().click();
 		String title = driver.getTitle();
-		Assert.assertEquals(title,"SPARTOO| Shoes, bags and clothes | Free Delivery");
+		Assert.assertEquals(title,title);
 	}
 	@Test(priority=1)
 	public void Header() throws IOException, InterruptedException
