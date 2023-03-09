@@ -113,4 +113,10 @@ public class HomePage {
 		 }
 	 
 	}
+	
+	@Test(priority = 4)
+	public void quitBrowser()
+	{
+		driver.close();
+	}
 }
